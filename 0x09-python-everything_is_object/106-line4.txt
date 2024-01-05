@@ -1,0 +1,1 @@
+Yes, the string object pointed by b is deleted after the execution of line 4 because b is deleted.

@@ -1,0 +1,4 @@
+20 int objects have been created and are still in memory before the execution of line 2 (print("Love")).
+
+Why:
+CPython caches a range of small integers, both positive and negative, to optimize memory usage. These integers are known as NSMALLPOSINTS and NSMALLNEGINTS. The range typically includes integers from -5 to 256. This caching mechanism reduces the overhead of creating new int objects for commonly used small integer values. In the given script, the print("I") statement does not create any new int objects, but it's the loading of the Python interpreter that creates the cached small integer objects, resulting in 20 int objects in memory before the execution of line 2.

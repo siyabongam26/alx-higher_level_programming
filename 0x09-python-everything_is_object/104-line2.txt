@@ -1,0 +1,1 @@
+1 int object is created for the integer value 1024 assigned to variable b.

@@ -1,0 +1,1 @@
+No, the int object pointed by b is not deleted after the execution of line 4 because b is deleted, but the object it pointed to is still referenced by a.
