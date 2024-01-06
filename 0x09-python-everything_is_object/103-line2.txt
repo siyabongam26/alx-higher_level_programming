@@ -1,1 +1,1 @@
-No new int objects are created for the integer value 1 assigned to variable b. Instead, b references the same int object created for the integer value 1 assigned to a. This is due to Python's memory optimization for small integers (typically, integers from -5 to 256 are cached and reused)
+0

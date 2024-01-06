@@ -1,1 +1,1 @@
-1 int object is created for the integer value 1 assigned to variable a.
+0
