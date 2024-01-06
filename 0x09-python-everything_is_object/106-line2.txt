@@ -1,1 +1,1 @@
-No new string objects are created by the execution of the second line of the script. Instead, b references the same string object created for the string value "SCHL" assigned to a. This is due to Python's memory optimization for small string literals.
+0

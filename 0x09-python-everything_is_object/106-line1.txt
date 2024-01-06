@@ -1,1 +1,1 @@
-1 string object is created by the execution of the first line of the script.
+1
