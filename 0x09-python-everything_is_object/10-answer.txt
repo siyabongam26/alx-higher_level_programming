@@ -1,1 +1,1 @@
-True 
+The code will print True.
