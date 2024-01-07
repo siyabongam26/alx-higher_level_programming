@@ -1,0 +1,43 @@
+# Test cases for matrix_divided function
+
+# Test Case 1: Dividing all elements of a matrix by a number (integer)
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>> matrix
+[[1, 2, 3], [4, 5, 6]]
+
+# Test Case 2: Dividing all elements of a matrix by a number (float)
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 2.5)
+[[0.4, 0.8, 1.2], [1.6, 2.0, 2.4]]
+>>> matrix
+[[1, 2, 3], [4, 5, 6]]
+
+# Test Case 3: Dividing all elements of a matrix by 0 (ZeroDivisionError should be raised)
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+# Test Case 4: Dividing a non-matrix (TypeError should be raised)
+>>> matrix = "Not a matrix"
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test Case 5: Dividing a matrix with rows of different sizes (TypeError should be raised)
+>>> matrix = [[1, 2, 3], [4, 5]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+# Test Case 6: Dividing by a non-number (TypeError should be raised)
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, "not a number")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
