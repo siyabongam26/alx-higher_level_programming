@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+"""
+Test cases for BaseGeometry class
+"""
+
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+# Test case 1: Successful validation
+bg = BaseGeometry()
+bg.integer_validator("my_int", 12)
+bg.integer_validator("width", 89)
+
+# Test case 2: TypeError - value is not an integer
+try:
+    bg.integer_validator("name", "John")
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+# Test case 3: ValueError - value is less than or equal to 0
+try:
+    bg.integer_validator("age", 0)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+# Test case 4: ValueError - value is less than or equal to 0
+try:
+    bg.integer_validator("distance", -4)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
